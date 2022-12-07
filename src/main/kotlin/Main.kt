@@ -10,4 +10,6 @@ fun promtDouble(text: String) : Int {
     val reader = Scanner(System.`in`)
     display(text)
     return reader.nextInt()
+fun binary (n: Int): String {
+    return if (n != 0) binary(n / 2) + n % 2 else { "" }
 }
