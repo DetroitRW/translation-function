@@ -19,7 +19,7 @@ fun displayln(text: String) {
     println(text)
 }
 
-fun promtDouble(text: String) : Int {
+fun promtDouble(text: String): Int {
     val reader = Scanner(System.`in`)
     display(text)
     return reader.nextInt()
