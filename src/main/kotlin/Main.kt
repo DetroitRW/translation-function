@@ -1,7 +1,34 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import java.util.*
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main(args: Array<String>) {
+
+    while (true) {
+        val n =  promtDouble("Введите десятичное число: ")
+        if (n == 0) {
+            break
+        }
+        displayln(binary(n))
+    }
+}
+
+fun display(text: String) {
+    print(text)
+}
+
+fun displayln(text: String) {
+    println(text)
+}
+
+fun promtDouble(text: String): Int {
+    val reader = Scanner(System.`in`)
+    display(text)
+    return reader.nextInt()
+}
+
+fun binary(n: Int): String {
+    if (n == 0) {
+        return ""
+    }
+
+    return binary(n / 2) + "${n % 2}"
 }
