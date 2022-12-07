@@ -25,6 +25,10 @@ fun promtDouble(text: String): Int {
     return reader.nextInt()
 }
 
-fun binary (n: Int): String {
-    return if (n != 0) binary(n / 2) + n % 2 else { "" }
+fun binary(n: Int): String {
+    if (n == 0) {
+        return ""
+    }
+
+    return binary(n / 2) + "${n % 2}"
 }
